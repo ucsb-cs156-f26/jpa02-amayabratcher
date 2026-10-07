@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Team.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">hello</a> &gt; <a href="index.source.html" class="el_package">edu.ucsb.cs156.spring.hello</a> &gt; <span class="el_source">Team.java</span></div><h1>Team.java</h1><pre class="source lang-java linenums">package edu.ucsb.cs156.spring.hello;
+
+import java.util.ArrayList;
+
+/**
+ * A class to represent a team of developers.
+ */
+public class Team {
+    public String name;
+    public ArrayList&lt;String&gt; members;
+
+    /**
+     * Default constructor for a team.
+     * Needed if we use Jackson for JSON serialization/deserialization
+     */
+<span class="fc" id="L16">    public Team() {</span>
+<span class="fc" id="L17">        this.name = &quot;&quot;;</span>
+<span class="fc" id="L18">        this.members = new ArrayList&lt;String&gt;();</span>
+<span class="fc" id="L19">    }</span>
+
+    /**
+     * Constructor a team with a given name.
+     * @param name name of the team
+     */
+<span class="fc" id="L25">    public Team(String name) {</span>
+<span class="fc" id="L26">        this.name = name;</span>
+<span class="fc" id="L27">        this.members = new ArrayList&lt;String&gt;();</span>
+<span class="fc" id="L28">    }</span>
+    /**
+     * Add a member to the team
+     * @param member members name
+     */
+    public void addMember(String member) {
+<span class="fc" id="L34">        this.members.add(member);</span>
+<span class="fc" id="L35">    }</span>
+    /*
+     * Get the name of the team
+     * @return the name of the team
+     */
+    public String getName() {
+<span class="fc" id="L41">        return this.name;</span>
+    }
+    /*
+     * Get the members of the team
+     * @return the members of the team
+     */
+    public ArrayList&lt;String&gt; getMembers() {
+<span class="fc" id="L48">        return this.members;</span>
+    }
+
+    /** setter for name */
+    public void setName(String name) {
+<span class="fc" id="L53">        this.name = name;</span>
+<span class="fc" id="L54">    }</span>
+
+    /**
+     * setter for members
+     */
+    public void setMembers(ArrayList&lt;String&gt; members) {
+<span class="fc" id="L60">        this.members = members;</span>
+<span class="fc" id="L61">    }</span>
+
+    /**
+     * Check if a team is equal to another object
+     * @param obj object to compare to
+     * @return true if the object is a team with the same name and members
+     */
+    @Override
+    public boolean equals(Object obj) {
+<span class="pc bpc" id="L70" title="1 of 2 branches missed.">        if (obj == this) {</span>
+<span class="nc" id="L71">            return true;</span>
+        }
+<span class="pc bpc" id="L73" title="1 of 2 branches missed.">        if (!(obj instanceof Team)) {</span>
+<span class="nc" id="L74">            return false;</span>
+        }
+<span class="fc" id="L76">        Team other = (Team) obj;</span>
+<span class="pc bpc" id="L77" title="2 of 4 branches missed.">        return this.name.equals(other.name) &amp;&amp; this.members.equals(other.members);</span>
+    }
+
+    /*
+     * Get a string representation of the team
+     */
+    @Override
+    public String toString() {
+<span class="nc" id="L85">        return &quot;Team(name=&quot; + this.name + &quot;, members=&quot; + this.members + &quot;)&quot;;</span>
+    }
+
+    /**
+     * Get a hash code for the team
+     */
+    @Override
+    public int hashCode() {
+<span class="nc" id="L93">        return this.name.hashCode() | this.members.hashCode();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.15.202606040825</span></div></body></html>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>HelloController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">hello</a> &gt; <a href="index.source.html" class="el_package">edu.ucsb.cs156.spring.hello</a> &gt; <span class="el_source">HelloController.java</span></div><h1>HelloController.java</h1><pre class="source lang-java linenums">package edu.ucsb.cs156.spring.hello;
+
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
+
+/**
+ * A simple controller to handle HTTP requests to the application.
+ */
+
+@RestController
+<span class="fc" id="L11">public class HelloController {</span>
+
+    /**
+     * Handle a GET request to the root URL (home page)
+     * 
+     * @return home page content as HTML
+     */
+
+    @GetMapping(&quot;/&quot;)
+    public String index() {
+<span class="fc" id="L21">        return &quot;&quot;&quot;</span>
+                &lt;h1&gt;Greetings from Spring Boot!&lt;/h1&gt;
+                &lt;p&gt;This is a simple example of a Spring Boot application.&lt;/p&gt;
+                &lt;p&gt;&lt;a href=&quot;/info&quot;&gt;Developer Info&lt;/a&gt;&lt;/p&gt;
+                &quot;&quot;&quot;;
+    }
+
+    /**
+     * Handle a GET request to the /info URL
+     * 
+     * @return HTML content with developer info
+     */
+
+    @GetMapping(&quot;/info&quot;)
+    public String info() {
+<span class="fc" id="L36">        return String.format(&quot;&quot;&quot;</span>
+                &lt;h1&gt;Developer Info&lt;/h1&gt;
+                &lt;ul&gt;
+                  &lt;li&gt;Name: %s&lt;/li&gt;
+                  &lt;li&gt;Github ID: &lt;a href=&quot;https://github.com/%s&quot;&gt;%s&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;Team: &lt;a href=&quot;/team&quot;&gt;%s&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+<span class="fc" id="L43">                &quot;&quot;&quot;, Developer.getName(), Developer.getGithubId(), Developer.getGithubId(), Developer.getTeam().getName());</span>
+    }
+
+    /**
+     * Handle a GET request to the /team URL
+     * 
+     * @return Team object in JSON format
+     */
+
+    @GetMapping(&quot;/team&quot;)
+    public Team team() {
+<span class="fc" id="L54">        return Developer.getTeam();</span>
+    }
+
+  
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.15.202606040825</span></div></body></html>

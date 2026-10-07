@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Developer.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">hello</a> &gt; <a href="index.source.html" class="el_package">edu.ucsb.cs156.spring.hello</a> &gt; <span class="el_source">Developer.java</span></div><h1>Developer.java</h1><pre class="source lang-java linenums">package edu.ucsb.cs156.spring.hello;
+
+/**
+ * A class with static methods to provide information about the developer.
+ */
+
+public class Developer {
+
+    // This class is not meant to be instantiated
+    // so we make the constructor private
+
+    private Developer() {}
+    
+    /**
+     * Get the name of the developer
+     */
+
+    public static String getName() {
+        // TODO: Change this to your name
+        // You may use just the name that is used on &lt;https://bit.ly/cs156-f26-teams&gt;
+        // i.e. your first name, or your first and initial of last name
+
+<span class="fc" id="L23">        return &quot;Chris G.&quot;;</span>
+    }
+
+    /**
+     * Get the github id of the developer
+     * @return github id of the developer
+     */
+
+    public static String getGithubId() {
+        // TODO: Change this to your github id
+<span class="fc" id="L33">        return &quot;cgaucho&quot;;</span>
+    }
+
+    /**
+     * Get the developers team
+     * @return developers team as a Java object
+     */
+    
+    public static Team getTeam() {
+        // TODO: Change this to your team name
+<span class="fc" id="L43">        Team team = new Team(&quot;f26-xx&quot;);</span>
+<span class="fc" id="L44">        team.addMember(&quot;Alice&quot;);</span>
+<span class="fc" id="L45">        team.addMember(&quot;Bob&quot;);</span>
+<span class="fc" id="L46">        team.addMember(&quot;Chris G.&quot;);</span>
+<span class="fc" id="L47">        team.addMember(&quot;Danny&quot;);</span>
+<span class="fc" id="L48">        team.addMember(&quot;Eve&quot;);</span>
+<span class="fc" id="L49">        team.addMember(&quot;Frances&quot;);</span>
+<span class="fc" id="L50">        return team;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.15.202606040825</span></div></body></html>

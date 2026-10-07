@@ -1,0 +1,5 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+hello,edu.ucsb.cs156.spring.hello,Developer,0,29,0,0,0,10,0,3,0,3
+hello,edu.ucsb.cs156.spring.hello,Team,20,66,4,4,4,20,6,8,2,8
+hello,edu.ucsb.cs156.spring.hello,Application,0,8,0,0,0,3,0,2,0,2
+hello,edu.ucsb.cs156.spring.hello,HelloController,0,29,0,0,0,5,0,4,0,4
