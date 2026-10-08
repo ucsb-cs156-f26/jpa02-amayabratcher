@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 public class DeveloperTest {
 
     @Test
-    
+
     public void testPrivateConstructor() throws Exception {
         // this hack is from https://www.timomeinen.de/2013/10/test-for-private-constructor-to-get-full-code-coverage/
         Constructor<Developer> constructor = Developer.class.getDeclaredConstructor();
@@ -51,5 +51,6 @@ public class DeveloperTest {
         assertTrue(t.getMembers().contains("Bogdan"),"Team should contain Bogdan");
         assertTrue(t.getMembers().contains("Tom"),"Team should contain Tom");
         assertTrue(t.getMembers().contains("Jerry"),"Team should contain Jerry");
+        assertTrue(t.getMembers().contains("Amaya"),"Team should contain Amaya");
     }
 }
