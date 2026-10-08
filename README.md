@@ -2,7 +2,7 @@
 
 
 Repo: https://github.com/ucsb-cs156-f26/jpa02-amayabratcher
-Deployed at:  https://jpa02-amayabratcher.dokku-09.cs.ucsb.edu
+Deployed at: https://jpa02-amayabratcher.dokku-09.cs.ucsb.edu
 
 # About this repo
 
